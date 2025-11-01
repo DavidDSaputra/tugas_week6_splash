@@ -77,6 +77,37 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: const Text("Login"),
               ),
             ),
+              const SizedBox(height: 20),
+            Row(children: const [
+              Expanded(child: Divider()),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                child: Text("ATAU"),
+              ),
+              Expanded(child: Divider()),
+            ]),
+            const SizedBox(height: 16),
+
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(Icons.g_mobiledata, size: 24),
+                    label: const Text("Google"),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: OutlinedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(Icons.facebook_outlined, size: 20),
+                    label: const Text("Facebook"),
+                  ),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
