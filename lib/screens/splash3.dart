@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../widgets/indicator_bar.dart';
-import 'splash2.dart';
+import 'login.dart';
 
-class Splash1Screen extends StatelessWidget {
-  const Splash1Screen({super.key});
+class Splash3Screen extends StatelessWidget {
+  const Splash3Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,33 +16,30 @@ class Splash1Screen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
-              Image.asset('assets/images/splash1.png', height: 240, fit: BoxFit.contain),
+              Image.asset('assets/images/splash3.png', height: 240),
               const SizedBox(height: 24),
-              Text("Selamat Datang",
+              Text("Siap Dipakai",
                   style: Theme.of(context).textTheme.headlineLarge),
               const SizedBox(height: 8),
               Text(
-                "infokan per commit an",
+                "Langsung masuk ke layar login. Tidak perlu menghafal mantra hujan",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: cs.onSurfaceVariant),
               ),
               const Spacer(),
-              const IndicatorBar(current: 0, total: 3),
+              const IndicatorBar(current: 2, total: 3),
               const SizedBox(height: 16),
               SizedBox(
                 width: double.infinity,
                 height: 48,
                 child: FilledButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacement(
-                      PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => const Splash2Screen(),
-                        transitionsBuilder: (_, a, __, child) =>
-                          FadeTransition(opacity: a, child: child),
-                      ),
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (_) => const LoginScreen()),
+                      (route) => false,
                     );
                   },
-                  child: const Text("Lanjut"),
+                  child: const Text("Mulai"),
                 ),
               ),
             ],

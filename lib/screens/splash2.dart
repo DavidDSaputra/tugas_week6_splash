@@ -22,7 +22,7 @@ class Splash2Screen extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineLarge),
               const SizedBox(height: 8),
               Text(
-                "UI rapi, fokus, dan hemat ketukan. Kita sayang jempol manusia.",
+                "sayangi jempol.",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: cs.onSurfaceVariant),
               ),
